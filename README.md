@@ -1,2 +1,0 @@
-# ddosByC-
-ddos by c++
