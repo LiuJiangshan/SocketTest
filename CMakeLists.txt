@@ -3,4 +3,4 @@ project(ddosByC)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(CTest src/main.cpp)
+add_executable(ddos jni/ddos.cpp)

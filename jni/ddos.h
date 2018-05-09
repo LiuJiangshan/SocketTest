@@ -23,17 +23,15 @@
 #define main_h
 
 void log(std::string log) {
-    std::cout << log << std::endl;
+//    std::cout << log << std::endl;
 }
 
-std::string getHttpRequestData(const char *domain, int port, const char *path) {
-    std::string head = "GET http://";
-    head.append(domain)
-            .append(path)
-            .append("  HTTP/1.1\\r\\nHost: ")
+std::string getHttpRequestData(const char *domain, const char *path) {
+    std::string head = "GET ";
+    head.append(path)
+            .append(" HTTP/1.1\r\nHost: ")
             .append(domain)
-            .append(":")
-            .append(std::to_string(port)).append("\\r\\n\\r\\n");
+            .append("\r\n\r\n");
     return head;
 }
 
